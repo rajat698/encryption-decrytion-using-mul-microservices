@@ -1,0 +1,9 @@
+FROM python:latest
+
+LABEL Maintainer="rajat"
+
+WORKDIR /
+
+COPY decrypt.py /
+
+ENTRYPOINT [ "python", "./decrypt.py"]

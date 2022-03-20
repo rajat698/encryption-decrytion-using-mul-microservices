@@ -1,4 +1,5 @@
-input_string, cipher = input().split()                  #User inputs
+import sys
+input_string, cipher = sys.argv[1:]               #User inputs
 
 KEY = 0                                                         #Calculating sum of ASCIIs of cipher
 for i in range(len(cipher)):
