@@ -1,0 +1,11 @@
+FROM python:latest
+
+LABEL Maintainer="rajat"
+
+WORKDIR /
+
+COPY . /app
+
+ENTRYPOINT [ "python" ]
+
+CMD [TDD.py]
