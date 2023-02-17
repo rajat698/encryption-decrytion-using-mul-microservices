@@ -1,0 +1,26 @@
+version: "3"
+services:
+    ContainerA:
+        image: encrypt_socket
+        container_name: Container1
+        tty: true
+        cap_add:
+                - ALL
+        privileged: true
+    ContainerB:
+        image: decrypt_socket
+        container_name: Container2
+        tty: true
+        cap_add:
+                - ALL
+    ContainerC:
+        image: tdd
+        container_name: Container3
+        tty: true
+        cap_add:
+                - ALL
+networks:
+  default:
+    driver: bridge
+
+  

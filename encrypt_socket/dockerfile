@@ -1,0 +1,15 @@
+FROM python:latest
+
+LABEL Maintainer="rajat"
+
+COPY ./requirements.txt /requirements.txt
+
+WORKDIR /
+
+RUN pip install -r requirements.txt
+
+COPY . /app
+
+ENTRYPOINT [ "python" ]
+
+CMD [socket_map.py]
